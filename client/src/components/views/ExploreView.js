@@ -80,7 +80,7 @@ const ExploreView = () => {
                   {posts.map((post) => (
                     <Fade in={true} key={post._id}>
                       <div>
-                        <PostCard post={post} />
+                        <PostCard post={post} preview="primary" />
                       </div>
                     </Fade>
                   ))}
