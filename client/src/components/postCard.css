@@ -1,0 +1,49 @@
+.post-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  max-width: 100%;
+}
+
+.post-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1) !important;
+}
+
+.title {
+  font-weight: bold;
+  color: #333;
+}
+
+.content {
+  color: #555;
+  line-height: 1.6;
+}
+
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 10px 0;
+}
+
+.content a {
+  color: #00adb5;
+  text-decoration: none;
+}
+
+.content a:hover {
+  text-decoration: underline;
+}
+
+.content pre {
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.content blockquote {
+  border-left: 4px solid #00adb5;
+  padding-left: 10px;
+  margin-left: 0;
+  color: #666;
+}

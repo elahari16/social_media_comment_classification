@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toxic Comment Classifier</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <h2 class="title">Toxic Comment Classifier</h2>
+        <div class="comments-section">
+            <div class="comment-box">
+                <img src="https://via.placeholder.com/40" class="avatar" alt="User">
+                <div class="input-area">
+                    <textarea id="commentBox" placeholder="Write a comment..."></textarea>
+                    <button onclick="classifyComment()">Check Toxicity</button>
+                </div>
+            </div>
+            <div id="resultBox" class="result-box"></div>
+        </div>
+    </div>
+
+    <script>
+        function classifyComment() {
+            let comment = document.getElementById("commentBox").value;
+            fetch("/api/predict", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ message: comment })
+            })
+            .then(response => response.json())
+            .then(data => {
+                const resultBox = document.getElementById("resultBox");
+                const commentElement = document.createElement("div");
+                commentElement.classList.add("comment-display");
+                commentElement.innerHTML = `
+                    <img src="https://via.placeholder.com/40" class="avatar" alt="User">
+                    <div class="comment-content">
+                        <span class="username">you</span>
+                        <p>${comment}</p>
+                        <span class="tag ${data.prediction === 'Toxic' ? 'toxic' : 'not-toxic'}">${data.prediction}</span>
+                    </div>
+                `;
+                resultBox.prepend(commentElement);
+                document.getElementById("commentBox").value = '';
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+type: Boolean,
+      default: false,
+    },
+  },
+  { timestamps: true }
+);
+=======
+    edited: {
+      type: Boolean,
+      default: false,
+    },
+    is_toxic: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  { timestamps: true }
+);

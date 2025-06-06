@@ -1,0 +1,109 @@
+{
+  "info": {
+    "name": "Comment API Tests",
+    "_postman_id": "12345678-abcd-efgh-ijkl-1234567890ab",
+    "description": "Tests for comment creation and fetching with authentication and toxicity classification",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Non-Toxic Comment",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{auth_token}}",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"content\":\"This is a friendly comment.\",\"userId\":\"user123\"}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/comments/12345",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "comments",
+            "12345"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Toxic Comment",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{auth_token}}",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"content\":\"You are stupid and ugly!\",\"userId\":\"user123\"}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/comments/12345",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "comments",
+            "12345"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Comments",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{auth_token}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/comments/12345",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "comments",
+            "12345"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
