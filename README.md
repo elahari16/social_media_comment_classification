@@ -29,7 +29,7 @@ Our app features an advanced comment classification system that:
 ## Installation and usage
 1) Clone this repository  
 ```
-git clone https://github.com/elahari16/mini-social-media-app.git
+git clone https://github.com/elahari16/social_media_comment_classification
 ```
 2) Install dependencies  
 ```
