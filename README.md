@@ -1,10 +1,10 @@
-# Social Media App with Comment Classification
+# Social Media App with Comment Classification 
 
 A fully-featured social media web application built with the MERN stack, featuring real-time comment toxicity classification.
 
 ## Features
 - Create, read, update and delete posts
-- **Advanced comment classification** using trained ML model
+- ***Advanced comment classification*** using trained ML model
 - Real-time toxicity detection for harmful content
 - Like and unlike posts
 - Create, reply to, read, update and delete nested comments
@@ -22,7 +22,7 @@ A fully-featured social media web application built with the MERN stack, featuri
 ## Comment Classification
 Our app features an advanced comment classification system that:
 - Detects toxic content in real-time
-- Uses a custom-trained model for Tamil and English
+- Uses a custom-trained model for **Tamil and English**
 - Provides immediate visual feedback on comment toxicity
 - Helps maintain a positive community environment
 
@@ -61,17 +61,15 @@ npm start
 ```
 
 ## Screenshots
-### Explore view
-![image](https://user-images.githubusercontent.com/76620777/170822044-44c5f2e6-879f-4b16-8059-f9e331ba57de.png)
+### Login in view
+![Screenshot 2025-06-06 183242](https://github.com/user-attachments/assets/8d491686-1b72-4d15-9ffc-8b486ff8ad7a)
 
 ### Post view with Comment Classification
-![image](https://user-images.githubusercontent.com/76620777/170822055-ac686a28-7d5b-4d44-b8d3-a028521534d8.png)
+![Screenshot 2025-06-06 181744](https://github.com/user-attachments/assets/2aafeeca-c4cb-4ce8-8f8c-ea78e485260a)
 
-### Nested comments with Toxicity Detection
-![image](https://user-images.githubusercontent.com/76620777/170822065-64622f43-5f70-48c2-9503-0e1b80575fd2.png)
 
 ### Profile view
-![image](https://user-images.githubusercontent.com/76620777/170822076-18741eef-ba2b-4750-b468-e7e9561a6a71.png)
+![Screenshot 2025-06-06 183714](https://github.com/user-attachments/assets/48f515f1-2b5c-4f03-9cfa-fe79ea62b30f)
 
-### Real-time private messenger
-![image](https://user-images.githubusercontent.com/76620777/170822084-89a9d3ac-22ed-4a92-ab58-9b0af878e03e.png)
+### Project presentation 
+https://docs.google.com/presentation/d/1b7eukQViM5KglocpUfRwh58t5ZuZp7ep/edit?usp=sharing&ouid=112558413164205700415&rtpof=true&sd=true
